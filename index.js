@@ -20,10 +20,42 @@ for (let list of li) {
 let className =document.getElementsByClassName("image-container");
     for (let container of className) {
        container.style.backgroundColor = "black";
-    
-}
-//let IdElement =document.getElementById("course-outcomes");
- //   for (let element of IdElement) {
-  //    element.style.backgroundColor = "purple";  
-//}
+    }
 document.getElementById("course-outcomes").style.backgroundColor="maroon";
+
+//inserting Elemnts into a DOM
+
+let newRow = document.createElement("tr");
+
+// Create the first table cell
+let tableData1 = document.createElement("td");
+tableData1.textContent = 3;
+newRow.append(tableData1);
+
+// Create the second table cell
+let q1 = document.createElement('td');
+q1.textContent = "01-01-2026";
+newRow.append(q1);
+
+// Create the third table cell
+let q2 = document.createElement('td');
+q2.textContent = "01-04-2026";
+newRow.append(q2);
+
+// Create the fourth table cell
+let q3 = document.createElement('td');
+q3.textContent = "01-07-2026";
+newRow.append(q3);
+
+// Create the fifth table cell
+let q4 = document.createElement('td');
+q4.textContent = "01-10-2026";
+newRow.append(q4);
+
+let tableBody = document.querySelector("#last-table tbody")
+tableBody.append(newRow)
+
+//event listeners
+document.addEventListener('click',()=>{
+    console.log("Our Document has been Clicked!!!")
+})
