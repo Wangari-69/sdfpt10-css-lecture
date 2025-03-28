@@ -26,13 +26,11 @@ document.getElementById("course-outcomes").style.backgroundColor="maroon";
 //inserting Elemnts into a DOM
 
 let newRow = document.createElement("tr");
+let number=document.createElement("td");
+number.textContent="3";
+newRow.append(number)
+//Create the first table cell
 
-// Create the first table cell
-let tableData1 = document.createElement("td");
-tableData1.textContent = 3;
-newRow.append(tableData1);
-
-// Create the second table cell
 let q1 = document.createElement('td');
 q1.textContent = "01-01-2026";
 newRow.append(q1);
@@ -52,10 +50,23 @@ let q4 = document.createElement('td');
 q4.textContent = "01-10-2026";
 newRow.append(q4);
 
-let tableBody = document.querySelector("#last-table tbody")
+let tableBody = document.querySelector("tbody")
 tableBody.append(newRow)
 
 //event listeners
 document.addEventListener('click',()=>{
-    console.log("Our Document has been Clicked!!!")
+    console.log("Our Document has been Clicked!!!");
+})
+
+/*document.querySelector('button').addEventListener(`click`),()=>{
+    console.log(buttonclicked);
+}*/
+
+const newElement=document.createElement("input")
+newElement.type="text"
+document.querySelector(".image-container").before(newElement);
+
+newElement.addEventListener("input", function () {
+    document.querySelector("h1").textContent= this.value
+    
 })
